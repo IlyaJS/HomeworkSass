@@ -1,0 +1,61 @@
+$primary-color: #fff
+$font-stack: 100%
+$width-footer: 100%
+$margin-btn: 3%
+
+%data-footer
+	position: absolute
+	bottom: 0
+  	left: 0
+	width: $width-footer
+	height: 70px
+	background-color: #000
+	border-radius: 20px 20px 0 0
+
+%data-p
+	color: #fff
+
+=create-text()
+	font-family: Arial
+	font-size: 30px
+	font-weight: bold
+	color: blue 
+	padding-top: 20px
+p 
+	+create-text()
+			
+html,body 
+	margin: 0 
+.block_header 
+	width: $font-stack
+	height: 70px 
+	background-color: #727272 
+	border-radius: 0 0 20px 20px 
+	h2 
+		padding-top: 1% 
+.block_container 
+	width: 95% 
+	height: 300px 
+	background-color: #adadad 
+	margin: 10px auto 20px auto 
+	border-radius: 20px 
+	h1 
+		padding-top: 2% 
+	.button 
+		margin-top: $margin-btn
+		padding: 10px 5px 
+		background-color: #7d99c6 
+		color: $primary-color 
+		border-radius: 12px 
+h1,h2 
+	text-decoration: underline 
+h1,h2,p 
+	margin: 0 
+h1,h2,p, .button 
+	margin-left: 3.4% 
+
+
+.block_footer 
+	@extend %data-footer 
+	p 	 
+		@extend %data-p	 
